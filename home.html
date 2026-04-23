@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="navigation">
+        <nav class="header-nav">
+            <div class="burger-header">
+                <h2 class="burger-title">MIRAS</h2>
+                <button class="burger-btn" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <ul class="nav-list" id="nav-menu">
+                <li class="nav-item active"><a href="#home" ><button class="li-button">Home</button></a></li>
+                <li class="nav-item"><a href="#about" ><button class="li-button">About me</button></a></li>
+                <li class="nav-item"><a href="#work" ><button class="li-button">My work</button></a></li>
+                <li class="nav-item"><a href="gallery.html" ><button class="li-button">Gallery</button></a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+    <div class="body">
+
+        <main>
+            <section id="home">
+                <div class="main-home">
+                    <div>
+                        <div class="me">
+                            <h4 class="hello">Hello, my name is</h4>
+                            <h1 class="name">Miras Maratov</h1>
+                            <h2 class="prof">Web <br>Designer</h2>
+                            <button class="but-contact">Contact</button>
+                        </div>
+                    </div>
+
+
+                    <div class="Im-photo">
+                        <img src="img/Group 1.png" alt="">
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section id="about">
+                <div class="about-me">
+                    <h2 class="about-title">About me</h2>
+    
+                    <div class="about-grid">
+                        <article class="grid-item">
+                            <h4 class="about-h">Kak ya Rabotayu</h4>
+                            <p class="about-p">Sperva ya delayu dizain saita v figme chtobi pokazat vam dizain samogo saita. Chtobi vi skazali gde scorectirovat sait. I tolko potom ya delay sait</p>
+                        </article>
+
+                        <article class="grid-item">
+                            <h4 class="about-h small">Mesto uchebi</h4>
+                            <p class="about-p small">Ya uchilsa v Garvarde i poluchil diplom</p>
+                        </article>
+
+                        <article class="grid-item">
+                            <h4 class="about-h">Pochemu viberayt menya</h4>
+                            <p class="about-p">Potomuchta ya uchilsa v Garvarde i eto edinstvennoe prichina po kotoroi menya viberayt</p>
+                        </article>
+
+                        <article class="grid-item">
+                            <h4 class="about-h">Kakimi prilozheniami ya rabotay</h4>
+                            <div class="icons-row">
+                                <img src="img/svg/devicon_photoshop.svg" alt="Photoshop">
+                                <img src="img/svg/skill-icons_figma-dark.svg" alt="Figma">
+                                <img src="img/svg/skill-icons_vscode-dark.svg" alt="VS Code">
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section id="etap">
+                <div class="etap-me">
+                    <h2 class="etap-title">Etapy raboty</h2>
+
+                    <div class="four-card">
+                        <article class="flex-card">
+                            <h3 class="etap-h">Dogovarivaemsa po povodu dizaina</h3>
+                            <p class="etap-p">Vi mne govorite chto delat na kakoi site delat i dlya chego chto dobavit na chto akcentrirovat i t.d . </p>
+                        </article>
+
+
+                        <article class="flex-card">
+                            <h3 class="etap-h">Rabota s Figma</h3>
+                            <p class="etap-p more">Posle togo kak mi dogovarilis po povodu dizaina ya nachnu delat maket saita na Figme pokazivay chto cdelal vi ocenivaete i esli vi hotite izmenit chto to to ya izmenu eto.</p>
+                        </article>
+
+
+                        <article class="flex-card down">
+                            <h3 class="etap-h">Rabota s codom</h3>
+                            <p class="etap-p more">Potom kak vam ponravilos ya eto sozdyu sait v vscode sozdayu karkas saita potom dobavlayu dizain kotori vi hotite potom animiruy</p>
+                        </article>
+
+
+                        <article class="flex-card relative down">
+                            <img src="img/image-Photoroom (22) 1.png" alt="">
+                            <h3 class="etap-h z">Resultat</h3>
+                            <p class="etap-p other">Gotovo!!!</p>  
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="work">
+                    <h2 class="work-title">My work</h2>
+                    <div>
+                        <article class="scroll-photo">
+                            <button class="carousel-arrow carousel-arrow-prev" onclick="carouselMove(false)"><i class="fas fa-arrow-left"></i></button>
+                            <button class="carousel-arrow carousel-arrow-next" onclick="carouselMove()"><i class="fas fa-arrow-right"></i></button>
+                            <div class="carousel-container">
+                                <div class="carousel-slide">
+                                    <img src="img/scroll/img(1).png" alt="">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="img/scroll/img(2).png" alt="">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="img/scroll/img(3).png" alt="">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="img/scroll/img(4).png" alt="">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="img/scroll/img(5).png" alt="">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="img/scroll/img(6).png" alt="">
+                                </div>
+                            </div>
+                        </article>
+                        <article class="scroll-photo-bottom">
+                            <div class="carousel-container-bottom">
+                                <div class="carousel-slide-bottom">
+                                    <img src="img/scroll/img(1).png" alt="">
+                                </div>
+                                <div class="carousel-slide-bottom">
+                                    <img src="img/scroll/img(2).png" alt="">
+                                </div>
+                                <div class="carousel-slide-bottom">
+                                    <img src="img/scroll/img(3).png" alt="">
+                                </div>
+                                <div class="carousel-slide-bottom">
+                                    <img src="img/scroll/img(4).png" alt="">
+                                </div>
+                                <div class="carousel-slide-bottom">
+                                    <img src="img/scroll/img(5).png" alt="">
+                                </div>
+                                <div class="carousel-slide-bottom">
+                                    <img src="img/scroll/img(6).png" alt="">
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+            </section>
+
+
+
+            <section id="zakaz">
+                <div>
+                    <h2 class="zakazat-title">Zakazat</h2>
+                    <div class="zakaz-forma">
+                        <form class="form">
+                            <label for="name">Vvedite imya</label>
+                            <input type="text" placeholder="Name and Surname" id="name">
+                            
+                            <label for="tel">Vash nomer telefona</label>
+                            <input type="number" placeholder="+7 (700) 000 00 00" id="tel">
+
+                            <label for="chto">Chto delat</label>
+                            <textarea name="" id="chto"></textarea>
+                            <div class="form-button">
+                                <input type="reset" value="Sbrosit" class="zakaz-sbros">
+                                <input type="submit" value="Otpravit" class="zakaz-otpr">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section id="sviaz">
+                <h2 class="sviaz-title">Sviazatsya so mnoi</h2>
+                <div class="sviaz">
+                    <article class="sviaz-img">
+                        <img src="img/qr/qrcode_334529889_d49e02cae46da40bb1fa35e4f3e32022 (2)-Photoroom 1.png" alt="">
+                        <p class="sviaz-p">@m1tssmore</p>
+                    </article>
+
+                    <article class="sviaz-contact">
+                        <ul class="sviaz-ul">
+                            <li class="sviaz-li pochta">mirasmaratov993@gmail.com</li>
+                            <li class="sviaz-li telephon">+7 (700) 968 61 51</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+    </div>
+    
+            <footer>
+                <div class="footer-port">
+                    <div class="footer-razdel port">
+                        <h2 class = "footer-title">MIRAS</h2>
+                        <p class="footer-p">DESIGNER</p>
+                        <p class="footer-p">WEB</p>
+                        <p class="footer-p">UX</p>
+                        <p class="footer-p">UI</p>
+                    </div>
+    
+                    <div class="footer-razdel nav">
+                        <nav class="footer-nav">
+                            <ul class="footer-nav-list">
+                                <li class="foot-li"><a href="#home"><button class="footer-li-button">Home</button></a></li>
+                                <li class="foot-li"><a href="#about"><button class="footer-li-button">About me</button></a></li>
+                                <li class="foot-li"><a href="#work"><button class="footer-li-button">My work</button></a></li>
+                                <li class="foot-li"><a href=""><button class="footer-li-button">Gallery</button></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+    
+                    <div class="footer-razdel">
+                        <nav class="nav">
+                            <ul class="foot-ul">
+                                <li class="footer-li"><a href="#sviaz"><button class="footer-li-button">Svaziatsya so mnoi</button></a></li>
+                                <li class="footer-li"><a href="#zakaz"><button class="footer-li-button">Zakazat</button></a></li>
+                                <li class="footer-li"><a href="#sviaz"><button class="footer-li-button">Nomer</button></a></li>
+                                <li class="footer-li"><a href="#sviaz"><button class="footer-li-button">Email</button></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+    
+                    <div class="footer-razdel-relative">
+                        <a href="https://github.com/m1tssmore" target="_blank"><img src="img/svg/github.svg" alt="" class="footer-svg"></a>
+                        <a href="https://www.instagram.com/" target="_blank"><img src="img/svg/instagram.svg" alt="" class="footer-svg"></a>
+                        <a href="https://x.com/?lang=ru" target="_blank"><img src="img/svg/x.svg" alt="" class="footer-svg"></a>
+                    </div>
+                </div>
+            </footer>
+
+
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>

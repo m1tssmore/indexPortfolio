@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery — Miras</title>
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="navigation">
+            <nav class="header-nav">
+                <div class="burger-header">
+                    <button class="burger-btn" onclick="toggleMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <ul class="nav-list" id="nav-menu">
+                    <li class="nav-item"><a href="index.html"><button class="li-button">Home</button></a></li>
+                    <li class="nav-item"><a href="index.html#about"><button class="li-button">About me</button></a></li>
+                    <li class="nav-item"><a href="index.html#work"><button class="li-button">My work</button></a></li>
+                    <li class="nav-item active"><a href="gallery.html"><button class="li-button">Gallery</button></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="body">
+        <main>
+            <section class="gallery-section">
+                <h2 class="gallery-title">Gallery</h2>
+                <div class="gallery-grid">
+
+                    <div class="gallery-item" onclick="openLightbox('img/gallery/img1.jpg')">
+                        <img src="img/gallery/Rectangle 1.png" alt="Pustyna">
+                        <div class="gallery-item-label">Pustyna</div>
+                    </div>
+
+                    <div class="gallery-item" onclick="openLightbox('img/gallery/img2.jpg')">
+                        <img src="img/gallery/Rectangle 11.png" alt="Kot">
+                        <div class="gallery-item-label">Kot</div>
+                    </div>
+
+                    <div class="gallery-item" onclick="openLightbox('img/gallery/img3.jpg')">
+                        <img src="img/gallery/Rectangle 13.png" alt="Krossovki">
+                        <div class="gallery-item-label">Krossovki</div>
+                    </div>
+
+                    <div class="gallery-item" onclick="openLightbox('img/gallery/img4.jpg')">
+                        <img src="img/gallery/Rectangle 15.png" alt="Krossovki">
+                        <div class="gallery-item-label">Krossovki</div>
+                    </div>
+
+                    <div class="gallery-item" onclick="openLightbox('img/gallery/img5.jpg')">
+                        <img src="img/gallery/Rectangle 3.png" alt="Krossovki">
+                        <div class="gallery-item-label">Krossovki</div>
+                    </div>
+
+                    <div class="gallery-item" onclick="openLightbox('img/gallery/img6.jpg')">
+                        <img src="img/gallery/Rectangle 5.png" alt="Japon">
+                        <div class="gallery-item-label">Japon</div>
+                    </div>
+
+                    <div class="gallery-item" onclick="openLightbox('img/gallery/img7.jpg')">
+                        <img src="img/gallery/Rectangle 7.png" alt="France">
+                        <div class="gallery-item-label">France</div>
+                    </div>
+
+                    <div class="gallery-item" onclick="openLightbox('img/gallery/img8.jpg')">
+                        <img src="img/gallery/Rectangle 9.png" alt="Zamok">
+                        <div class="gallery-item-label">Zamok</div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <button class="lightbox-close" onclick="closeLightbox()">&#x2715;</button>
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <footer>
+        <div class="footer-port">
+            <div class="footer-razdel port">
+                <h2 class="footer-title">MIRAS</h2>
+                <p class="footer-p">DESIGNER</p>
+                <p class="footer-p">WEB</p>
+                <p class="footer-p">UX</p>
+                <p class="footer-p">UI</p>
+            </div>
+
+            <div class="footer-razdel nav">
+                <nav class="footer-nav">
+                    <ul class="footer-nav-list">
+                        <li class="foot-li"><a href="index.html"><button class="footer-li-button">Home</button></a></li>
+                        <li class="foot-li"><a href="index.html#about"><button class="footer-li-button">About me</button></a></li>
+                        <li class="foot-li"><a href="index.html#work"><button class="footer-li-button">My work</button></a></li>
+                        <li class="foot-li"><a href="gallery.html"><button class="footer-li-button">Gallery</button></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="footer-razdel">
+                <nav class="nav">
+                    <ul class="foot-ul">
+                        <li class="footer-li"><a href="index.html#sviaz"><button class="footer-li-button">Svaziatsya so mnoi</button></a></li>
+                        <li class="footer-li"><a href="index.html#zakaz"><button class="footer-li-button">Zakazat</button></a></li>
+                        <li class="footer-li"><a href="index.html#sviaz"><button class="footer-li-button">Nomer</button></a></li>
+                        <li class="footer-li"><a href="index.html#sviaz"><button class="footer-li-button">Email</button></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="footer-razdel-relative">
+                <a href="https://github.com/m1tssmore" target="_blank"><img src="img/svg/github.svg" alt="" class="footer-svg"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="img/svg/instagram.svg" alt="" class="footer-svg"></a>
+                <a href="https://x.com/?lang=ru" target="_blank"><img src="img/svg/x.svg" alt="" class="footer-svg"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('open');
+        }
+        document.querySelectorAll('.li-button').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.getElementById('nav-menu').classList.remove('open');
+            });
+        });
+
+        function openLightbox(src) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox').classList.add('open');
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('open');
+        }
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+        });
+    </script>
+</body>
+</html>

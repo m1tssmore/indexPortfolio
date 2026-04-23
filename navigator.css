@@ -1,0 +1,237 @@
+@font-face {
+    font-family: Fondamento;
+    src: url(fonts/Fondamento-Regular.woff2) format("woff2");
+    font-display: swap;
+}
+@font-face {
+    font-family: Irish-Grover;
+    src: url(fonts/IrishGrover-Regular.woff2) format("woff2");
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #05020B;
+    font-family: Fondamento, sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(125, 48, 198, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    padding: 40px 20px;
+    width: 100%;
+    max-width: 900px;
+}
+
+.header {
+    text-align: center;
+}
+
+.header-name {
+    font-family: Irish-Grover, sans-serif;
+    font-size: 72px;
+    font-weight: 400;
+    letter-spacing: -2px;
+    color: white;
+    line-height: 1;
+}
+
+.header-name span {
+    color: #7D30C6;
+}
+
+.header-role {
+    font-family: Fondamento, sans-serif;
+    font-size: 18px;
+    font-weight: 100;
+    color: rgba(255,255,255,0.5);
+    margin-top: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.header-divider {
+    width: 60px;
+    height: 2px;
+    background: #7D30C6;
+    margin: 20px auto 0;
+    border-radius: 2px;
+}
+
+
+.cards {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+}
+
+.card {
+    flex: 1;
+    background: rgba(66, 20, 110, 0.15);
+    border: 1px solid rgba(135, 78, 190, 0.25);
+    border-radius: 20px;
+    padding: 40px 32px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(125, 48, 198, 0.1) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.card:hover {
+    border-color: rgba(135, 78, 190, 0.7);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 60px rgba(125, 48, 198, 0.2);
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+}
+
+.card-icon.site {
+    background: rgba(125, 48, 198, 0.3);
+    border: 1px solid rgba(125, 48, 198, 0.5);
+}
+
+.card-icon.figma {
+    background: rgba(26, 26, 46, 0.8);
+    border: 1px solid rgba(135, 78, 190, 0.3);
+}
+
+.card-label {
+    font-family: Fondamento, sans-serif;
+    font-size: 12px;
+    font-weight: 100;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+}
+
+.card-title {
+    font-family: Irish-Grover, sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.card-desc {
+    font-family: Fondamento, sans-serif !important;
+    font-size: 15px;
+    font-weight: 100;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.6;
+    flex: 1;
+}
+
+.card-arrow {
+    font-family: Fondamento, sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #874EBE;
+    transition: gap 0.3s ease;
+}
+
+.card:hover .card-arrow {
+    gap: 14px;
+}
+
+.card-arrow svg {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-arrow svg {
+    transform: translateX(4px);
+}
+
+.figma-icon {
+    width: 28px;
+    height: 28px;
+}
+
+.globe-icon {
+    width: 28px;
+    height: 28px;
+}
+
+
+.footer {
+    font-family: Fondamento, sans-serif;
+    text-align: center;
+    color: rgba(255,255,255,0.2);
+    font-size: 13px;
+    font-weight: 100;
+}
+
+/* ========== RESPONSIVE ========== */
+@media(max-width: 600px) {
+    .cards {
+        flex-direction: column;
+    }
+    .header-name {
+        font-size: 48px;
+    }
+    .card-title {
+        font-size: 22px;
+    }
+}
+
+@media(max-width: 400px) {
+    .header-name {
+        font-size: 36px;
+    }
+    .container {
+        gap: 40px;
+    }
+}
