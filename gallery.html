@@ -34,42 +34,42 @@
                 <h2 class="gallery-title">Gallery</h2>
                 <div class="gallery-grid">
 
-                    <div class="gallery-item" onclick="openLightbox('img/gallery/img1.jpg')">
+                    <div class="gallery-item" onclick="openLightbox('img/gallery/Rectangle 1.png')">
                         <img src="img/gallery/Rectangle 1.png" alt="Pustyna">
                         <div class="gallery-item-label">Pustyna</div>
                     </div>
 
-                    <div class="gallery-item" onclick="openLightbox('img/gallery/img2.jpg')">
+                    <div class="gallery-item" onclick="openLightbox('img/gallery/Rectangle 11.png')">
                         <img src="img/gallery/Rectangle 11.png" alt="Kot">
                         <div class="gallery-item-label">Kot</div>
                     </div>
 
-                    <div class="gallery-item" onclick="openLightbox('img/gallery/img3.jpg')">
+                    <div class="gallery-item" onclick="openLightbox('img/gallery/Rectangle 13.png')">
                         <img src="img/gallery/Rectangle 13.png" alt="Krossovki">
                         <div class="gallery-item-label">Krossovki</div>
                     </div>
 
-                    <div class="gallery-item" onclick="openLightbox('img/gallery/img4.jpg')">
+                    <div class="gallery-item" onclick="openLightbox('img/gallery/Rectangle 15.png')">
                         <img src="img/gallery/Rectangle 15.png" alt="Krossovki">
                         <div class="gallery-item-label">Krossovki</div>
                     </div>
 
-                    <div class="gallery-item" onclick="openLightbox('img/gallery/img5.jpg')">
+                    <div class="gallery-item" onclick="openLightbox('img/gallery/Rectangle 3.png')">
                         <img src="img/gallery/Rectangle 3.png" alt="Krossovki">
                         <div class="gallery-item-label">Krossovki</div>
                     </div>
 
-                    <div class="gallery-item" onclick="openLightbox('img/gallery/img6.jpg')">
+                    <div class="gallery-item" onclick="openLightbox('img/gallery/Rectangle 5.png')">
                         <img src="img/gallery/Rectangle 5.png" alt="Japon">
                         <div class="gallery-item-label">Japon</div>
                     </div>
 
-                    <div class="gallery-item" onclick="openLightbox('img/gallery/img7.jpg')">
+                    <div class="gallery-item" onclick="openLightbox('img/gallery/Rectangle 7.png')">
                         <img src="img/gallery/Rectangle 7.png" alt="France">
                         <div class="gallery-item-label">France</div>
                     </div>
 
-                    <div class="gallery-item" onclick="openLightbox('img/gallery/img8.jpg')">
+                    <div class="gallery-item" onclick="openLightbox('img/gallery/Rectangle 9.png')">
                         <img src="img/gallery/Rectangle 9.png" alt="Zamok">
                         <div class="gallery-item-label">Zamok</div>
                     </div>
@@ -79,7 +79,7 @@
         </main>
     </div>
 
-    <!-- Lightbox -->
+
     <div class="lightbox" id="lightbox" onclick="closeLightbox()">
         <button class="lightbox-close" onclick="closeLightbox()">&#x2715;</button>
         <img id="lightbox-img" src="" alt="">
@@ -125,27 +125,6 @@
         </div>
     </footer>
 
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById('nav-menu');
-            menu.classList.toggle('open');
-        }
-        document.querySelectorAll('.li-button').forEach(btn => {
-            btn.addEventListener('click', () => {
-                document.getElementById('nav-menu').classList.remove('open');
-            });
-        });
-
-        function openLightbox(src) {
-            document.getElementById('lightbox-img').src = src;
-            document.getElementById('lightbox').classList.add('open');
-        }
-        function closeLightbox() {
-            document.getElementById('lightbox').classList.remove('open');
-        }
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeLightbox();
-        });
-    </script>
+    <script src = "script.js"></script>
 </body>
 </html>
